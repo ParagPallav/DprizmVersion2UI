@@ -1,0 +1,29 @@
+<!-- <input type="file" (change)="onFileChange($event)" multiple="false" />
+
+<table class="sjs-table">
+    <tr *ngFor="let row of data">
+        <td *ngFor="let val of row" style="
+        border: 1px solid blue;
+    ">
+            {{val}}
+        </td>
+    </tr>
+</table>
+<button (click)="export()">Export!</button> -->
+<h1>
+    Excel to JSON convertor
+</h1>
+
+<div>
+    <label for="">Select an .xlsx file to get json</label>
+    <br>
+    <input type="file" (change)="handleFile($event)" />
+</div>
+
+<div class="result-container" *ngIf="result && result.length>0">
+    <h2>
+        Result :
+        <br>
+    </h2>
+    {{result}}
+</div>
